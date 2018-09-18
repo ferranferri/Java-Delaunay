@@ -7,17 +7,23 @@ import com.phantomx.worldgenerator.voronoi.nodename.as3delaunay.LineSegment;
 import com.phantomx.worldgenerator.voronoi.nodename.as3delaunay.Voronoi;
 
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.BasicStroke;
 import java.awt.image.BufferedImage;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Random;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
- * WorldGenerator.java
+ * VoronoiGraph.java
  *
  * @author Connor
  */
-public abstract class WorldGenerator {
+public abstract class VoronoiGraph {
 
     final public ArrayList<Edge> edges = new ArrayList<>();
     final public ArrayList<Corner> corners = new ArrayList<>();
@@ -27,7 +33,7 @@ public abstract class WorldGenerator {
     protected Color OCEAN, RIVER, LAKE, BEACH;
     final public BufferedImage pixelCenterMap;
 
-    public WorldGenerator(Voronoi v, int numLloydRelaxations, Random r, HeightAlgorithm algorithm) {
+    public VoronoiGraph(Voronoi v, int numLloydRelaxations, Random r, HeightAlgorithm algorithm) {
         this.r = r;
         bounds = v.get_plotBounds();
         v = applyLloydRelaxations(v, numLloydRelaxations);

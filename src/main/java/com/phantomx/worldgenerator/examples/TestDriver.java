@@ -1,6 +1,6 @@
 package com.phantomx.worldgenerator.examples;
 
-import com.phantomx.worldgenerator.voronoi.WorldGenerator;
+import com.phantomx.worldgenerator.voronoi.VoronoiGraph;
 import com.phantomx.worldgenerator.voronoi.groundshapes.Blob;
 import com.phantomx.worldgenerator.voronoi.groundshapes.HeightAlgorithm;
 import com.phantomx.worldgenerator.voronoi.groundshapes.Perlin;
@@ -75,7 +75,7 @@ public class TestDriver {
         System.out.println("=============================");
     }
 
-    public static WorldGenerator createVoronoiGraph(int bounds, int numSites, int numLloydRelaxations, long seed, String algorithmName) {
+    public static VoronoiGraph createVoronoiGraph(int bounds, int numSites, int numLloydRelaxations, long seed, String algorithmName) {
         final Random r = new Random(seed);
         HeightAlgorithm algorithm = getAlgorithmImplementation(r, algorithmName);
 

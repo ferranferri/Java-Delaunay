@@ -1,7 +1,7 @@
 package com.phantomx.worldgenerator.examples;
 
 import com.phantomx.worldgenerator.voronoi.Center;
-import com.phantomx.worldgenerator.voronoi.WorldGenerator;
+import com.phantomx.worldgenerator.voronoi.VoronoiGraph;
 import com.phantomx.worldgenerator.voronoi.groundshapes.HeightAlgorithm;
 import com.phantomx.worldgenerator.voronoi.nodename.as3delaunay.Voronoi;
 
@@ -19,7 +19,7 @@ import java.util.Random;
  *
  * @author Connor
  */
-public class TestGraphImpl extends WorldGenerator {
+public class TestGraphImpl extends VoronoiGraph {
 
     public static enum ColorData {
 

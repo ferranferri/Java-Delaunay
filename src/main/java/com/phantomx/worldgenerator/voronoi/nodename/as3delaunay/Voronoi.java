@@ -276,7 +276,7 @@ public final class Voronoi {
      {
      return _sites.siteColors(referenceImage);
      }*/
-    /**
+    /*
      *
      * @param proximityMap a BitmapData whose regions are filled with the site
      * index values; see PlanePointsCanvas::fillRegions()
